@@ -1,0 +1,5 @@
+1	Optus UAT	Optus UAT lab	10
+2	relevant	Livescreen staging	20
+3	batfink	Remote client signing environment	40
+4	Optus production	Optus production cluster 	15
+5	tua	Solo staging server 	50
