@@ -1,0 +1,4 @@
+1	UIserver	Old JRAP application
+2	Client Dispenser	Remote client downloader
+3	Solo server	New JRAP application
+4	Content Aggregator	Manages all user content

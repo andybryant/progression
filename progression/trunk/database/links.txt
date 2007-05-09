@@ -1,0 +1,24 @@
+1	\N	http://test-revUI02:9060/ibm/console	Websphere Admin uat2	20
+2	\N	http://test-revUI02:9081/uiserver/admin/index.jsp	MZN SyncML	40
+3	\N	http://test-revUI02:9080/uiserver/admin/index.jsp	MZN SyncML	30
+4	\N	http://test-revUI02:19060/ibm/console	Websphere Admin uat1	10
+5	\N	http://test-revUI01:19080/uiserver/admin/home	MZN mainline	50
+6	\N	http://test-revUI01:9090/caserver/admin/home	CA	70
+7	Java	http://java.sun.com/	Java Home	10
+8	Java	http://theserverside.com/	The Server Side	50
+9	uiActive	http://sydc/twiki	Twiki home	60
+10	uiActive	https://iweb.uiactive.com/cgi-bin/irs-uiactive/FrontPage	IRS	70
+11	uiActive	http://tonto/doc/	Tonto docs	80
+25	\N	http://evaluate:9060/ibm/console	Websphere Admin	80
+26	\N	http://test-revUI01:9081/uiserver/admin/home	MZN IM	60
+31	Java	http://jakarta.apache.org/	Jakarta Home	40
+32	\N	http://o22rrrelui03:9080/uiserver/admin/home	MZN mainline	90
+33	\N	http://o22rrrelui10:9080/uiserver/admin/index.jsp	MZN 1.1	110
+34	\N	http://batfink:9080/uiserver/admin/index.jsp	MZN signing	120
+35	Java	http://java.sun.com/j2se/1.4.2/docs/api/index.html	J2SE 1.4.2 Javadoc	20
+36	Java	http://java.sun.com/j2ee/1.4/docs/api/index.html	J2EE 1.4 Javadoc	30
+49	\N	http://o22rrrelui06:9082/caserver/admin/home	Content Aggregator	100
+56	uiActive	http://sydc/bugs/	Bugzilla	90
+57	Jakarta	http://jakarta.apache.org/commons/lang/api-release/index.html	Commons lang	100
+58	Jakarta	http://jakarta.apache.org/commons/collections/api-release/index.html	Commons collections	110
+59	Jakarta	http://jakarta.apache.org/commons/configuration/apidocs_1.1/index.html	Commons config 1.1	120

@@ -1,0 +1,16 @@
+8	2.1.2rc13	1	1	3	complete	2007-02-22 16:36:30	\N	\N	
+9	1.1.4	1	4	3	complete	2007-02-22 16:36:30	\N	\N	
+10	2.1.1	1	1	2	complete	2007-02-22 16:36:30	\N	\N	First RSS deploy
+11	1.1.0	1	4	2	complete	2007-02-22 16:36:30	\N	\N	
+12	1.1.3rc1	1	1	2	complete	2007-02-22 16:36:30	\N	\N	MZN 1.1
+13	1.3.1.SimSync.rc13	1	1	3	complete	2007-02-22 16:55:33	\N	\N	SyncML MZN
+14	2.1.2rc26im	1	1	4	complete	2007-02-22 17:00:41	\N	\N	MZN IM
+15	2.1.6	1	2	3	complete	2007-02-26 14:10:53	\N	\N	Latest mainline dispenser
+16	1.3.1rc8	1	1	2	complete	2007-02-26 14:15:15	\N	\N	Hacked signing MZN
+17	2.1.2rc14	1	1	2	complete	2007-02-26 15:56:54	\N	\N	Include series40 billing fix
+18	2.1.2rc28im	1	1	9	complete	2007-02-27 10:47:46	\N	\N	
+19	2.1.7rc1	1	2	3	complete	2007-02-27 10:47:46	\N	\N	
+20	2.1.2rc15	1	1	2	complete	2007-02-27 17:23:49	\N	\N	Fixes MIDP billing and RMS bug
+21	1.1.5	1	4	2	complete	2007-02-28 10:38:49	\N	2007-02-28 10:39:01	Switched to 0.2.2 from snapshots
+23	2.1.2rc29im	1	1	3	complete	2007-02-28 14:50:28	\N	2007-02-28 14:50:39	
+24	2.1.2rc16	1	1	2	complete	2007-02-28 17:36:15	\N	\N	Includes MIDP RMS fix

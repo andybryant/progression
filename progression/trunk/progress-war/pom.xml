@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent> 
+    <groupId>org.dodgybits.progress</groupId> 
+    <artifactId>progress</artifactId> 
+    <version>1.0.0-SNAPSHOT</version>   
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.dodgybits.progress</groupId>
+  <artifactId>progress-war</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Progress webapp</name>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.totsp.gwt</groupId>
+        <artifactId>maven-googlewebtoolkit2-plugin</artifactId>
+        <version>1.5.1</version>
+        <configuration>
+          <logLevel>INFO</logLevel>
+          <runTarget>org.dodgybits.progress.view.gwt.Progress/main.html</runTarget>
+          <compileTarget>org.dodgybits.progress.view.gwt.Progress</compileTarget>
+          <!-- generatorRootClasses>mymodule.server.MyBean</generatorRootClasses -->
+          <!-- generatorDestinationPackage>mymodule.client</generatorDestinationPackage -->
+          <generateGettersAndSetters>false</generateGettersAndSetters>
+          <generatePropertyChangeSupport>false</generatePropertyChangeSupport>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>    
+    </plugins>
+  </build>
+    
+  <dependencies>
+    <dependency>
+      <groupId>org.dodgybits.progress</groupId>
+      <artifactId>progress-core</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.dodgybits.progress</groupId>
+      <artifactId>progress-api</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.dodgybits.progress</groupId>
+      <artifactId>progress-model</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>commons-beanutils</groupId> 
+      <artifactId>commons-beanutils</artifactId>
+      <scope>compile</scope>
+    </dependency>    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring</artifactId>
+      <scope>compile</scope>
+    </dependency>    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.1.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+      <scope>compile</scope>
+    </dependency>    
+    
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>1.3.3</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>1.3.3</version>
+      <scope>provided</scope>
+    </dependency>    
+  </dependencies>
+</project>

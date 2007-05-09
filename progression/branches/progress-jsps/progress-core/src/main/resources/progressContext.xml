@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+         ">
+
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
+    <property name="url" value="jdbc:mysql://localhost/progress?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull"/>
+    <property name="username" value="buildapp"/> 
+    <property name="password" value="build123"/> 
+    <property name="maxActive" value="100"/>
+    <property name="maxIdle" value="30"/>
+    <property name="maxWait" value="1000"/>
+    <property name="defaultAutoCommit" value="true"/>
+    <property name="removeAbandoned" value="true"/>
+    <property name="removeAbandonedTimeout" value="60"/>    
+  </bean> 
+  <!-- Using a container provided datasource
+  <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+    <property name="jndiName" value="java:comp/env/jdbc/appDataSource"/> 
+  </bean> 
+  -->
+
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="annotatedClasses">
+      <list>
+        <value>org.dodgybits.progress.model.Artifact</value>
+        <value>org.dodgybits.progress.model.DeployTarget</value>
+        <value>org.dodgybits.progress.model.Build</value>
+        <value>org.dodgybits.progress.model.Client</value>
+        <value>org.dodgybits.progress.model.Deploy</value>
+        <value>org.dodgybits.progress.model.Environment</value>
+        <value>org.dodgybits.progress.model.Target</value>
+        <value>org.dodgybits.progress.model.Link</value>
+        <value>org.dodgybits.progress.model.Person</value>
+        <value>org.dodgybits.progress.model.Project</value>
+      </list>
+    </property>
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+        <prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+      </props>
+    </property>
+  </bean>
+
+  <tx:annotation-driven transaction-manager="txManager"/> 
+
+  <aop:aspectj-autoproxy/>
+
+  <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"> 
+    <property name="sessionFactory" ref="sessionFactory"/> 
+  </bean> 
+ 
+  <bean id="artifactDao" class="org.dodgybits.progress.dao.hibernate.ArtifactHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="deployTargetDao" class="org.dodgybits.progress.dao.hibernate.DeployTargetHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="environmentDao" class="org.dodgybits.progress.dao.hibernate.EnvironmentHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="linkDao" class="org.dodgybits.progress.dao.hibernate.LinkHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="buildDao" class="org.dodgybits.progress.dao.hibernate.BuildHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="deployDao" class="org.dodgybits.progress.dao.hibernate.DeployHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="clientDao" class="org.dodgybits.progress.dao.hibernate.ClientHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="targetDao" class="org.dodgybits.progress.dao.hibernate.TargetHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="personDao" class="org.dodgybits.progress.dao.hibernate.PersonHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+  <bean id="projectDao" class="org.dodgybits.progress.dao.hibernate.ProjectHibernateDao" scope="singleton">
+    <property name="sessionFactory" ref="sessionFactory"/>    
+  </bean>
+ 
+</beans>

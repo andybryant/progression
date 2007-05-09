@@ -1,0 +1,14 @@
+27	1	1	9	running	Billing and branded channels
+28	22	4	10	running	Contains Ben's bootstrap patch
+29	8	1	11	inactive	First RSS deploy
+30	10	1	11	inactive	First RSS deploy
+31	12	1	11	running	First RSS deploy
+32	14	1	11	running	First RSS deploy
+33	16	1	11	running	First RSS deploy
+34	20	4	12	running	1
+35	21	4	12	running	2
+36	23	1	13	running	MZN 1.1
+37	24	1	13	running	MZN 1.1
+38	5	1	14	running	SyncML MZN
+39	6	1	14	running	SyncML MZN
+40	4	1	15	running	MZN IM

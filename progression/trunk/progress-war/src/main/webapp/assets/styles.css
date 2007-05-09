@@ -1,0 +1,78 @@
+td {color:#000033;  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size:11px;}
+a {color:#000099;}
+a:hover {color:#666699;}
+a:active {color:#666699;}
+a:visited {color:#000099;}
+
+.italics {font-style:italic;}
+.bold {font-weight:bold;}
+
+.inactive {color:#888888;}
+.running {}
+
+.header  {font-size:22px;color:#FFFFFF;background-color:#000033;font-weight:normal;}
+.line  {background-color:#000033;}
+.links  {font-size:11px;background-color:#9999CC;color:#000033;}
+.pipe  {color:black;background-color:#9999CC;}
+.footer  {font-size: 9px;  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;}
+
+.white {
+  background-color : White;
+}
+
+.border {
+  background-color:#aaaacc;
+}
+
+.title {
+  font-size:14px;
+  font-weight:bold;
+  background-color: #f9f9ff;
+}
+
+.tableHeader {
+  font-size:11px;
+  font-weight:bold;
+  background-color :#333366;
+  color : White;
+}
+
+.tableHeader:hover {
+  font-size:11px;
+  font-weight:bold;
+  background-color :#333366;
+  color : #cccccc;
+}
+.tableHeader:active {
+  font-size:11px;
+  font-weight:bold;
+  background-color :#333366;
+  color : #cccccc;
+}
+.tableHeader:visited {
+  font-size:11px;
+  font-weight:bold;
+  background-color :#333366;
+  color : White;
+}
+
+.label {
+  font-weight:bold;
+}
+
+.expired {
+  text-decoration:line-through;
+}
+
+.message {
+  font-weight:bold;
+  color : #ff0000  
+}
+
+.oddRow {background-color:#E1E1FB;}
+.evenRow {background-color:#F3F3FD;}
+
+.formTitle {
+  font-size:16px;font-weight:bold;
+}
+.required {background-image:url(../assets/required.gif); background-position:top right; background-repeat:no-repeat;}

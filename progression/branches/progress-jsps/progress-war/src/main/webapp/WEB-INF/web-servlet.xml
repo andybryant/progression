@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Controllers for presence administration pages -->
+<beans xmlns="http://www.springframework.org/schema/beans" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:aop="http://www.springframework.org/schema/aop" 
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> 
+
+  <!-- ========================= VIEW DEFINITIONS ========================= -->
+
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    <property name="prefix" value="/WEB-INF/jsp/web/"/>
+    <property name="suffix" value=".jsp"/>
+  </bean>
+
+  <!-- ========================= DEFINITIONS OF PUBLIC CONTROLLERS ========================= -->
+
+  <bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+  <bean name="/view" id="viewEntitiesController" class="org.dodgybits.progress.view.controllers.ViewEntitiesController"> 
+    <property name="methodNameResolver" ref="paramResolver"/> 
+    <property name="requireSession" value="false"/>   
+    <property name="cacheSeconds" value="60"/>                                          
+
+    <property name="linkDao" ref="linkDao"/> 
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="projectDao" ref="projectDao"/> 
+    <property name="artifactDao" ref="artifactDao"/> 
+    <property name="clientDao" ref="clientDao"/> 
+    <property name="targetDao" ref="targetDao"/> 
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/>
+    <property name="deployDao" ref="deployDao"/>
+    <property name="deployTargetDao" ref="deployTargetDao"/>
+  </bean> 
+  
+  <bean name="/manage" id="manageEntitiesController" class="org.dodgybits.progress.view.controllers.ManageEntitiesController">
+    <property name="methodNameResolver" ref="paramResolver"/> 
+
+    <property name="linkDao" ref="linkDao"/> 
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="projectDao" ref="projectDao"/> 
+    <property name="artifactDao" ref="artifactDao"/> 
+    <property name="clientDao" ref="clientDao"/> 
+    <property name="targetDao" ref="targetDao"/> 
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/>
+    <property name="deployDao" ref="deployDao"/>
+    <property name="deployTargetDao" ref="deployTargetDao"/>
+    <property name="newRowCount" value="5"/>
+  </bean>
+  
+  <bean name="/update" id="updateEntitiesController" class="org.dodgybits.progress.view.controllers.UpdateEntitiesController">
+    <property name="methodNameResolver" ref="paramResolver"/> 
+
+    <property name="linkDao" ref="linkDao"/> 
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="projectDao" ref="projectDao"/> 
+    <property name="artifactDao" ref="artifactDao"/> 
+    <property name="clientDao" ref="clientDao"/> 
+    <property name="targetDao" ref="targetDao"/> 
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/>
+    <property name="deployDao" ref="deployDao"/>
+    <property name="deployTargetDao" ref="deployTargetDao"/>
+  </bean>
+  
+  <bean name="/new/build" id="newBuildController" class="org.dodgybits.progress.view.controllers.NewBuildController">
+    <property name="projectDao" ref="projectDao"/> 
+    <property name="artifactDao" ref="artifactDao"/> 
+    <property name="personDao" ref="personDao"/> 
+  </bean>
+
+  <bean name="/new/deploy" id="newDeployController" class="org.dodgybits.progress.view.controllers.NewDeployController">
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/> 
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="targetDao" ref="targetDao"/> 
+  </bean>
+
+  <bean name="/edit/build" id="editBuildController" class="org.dodgybits.progress.view.controllers.EditBuildController">
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/> 
+  </bean>
+
+  <bean name="/edit/deploy" id="editDeployController" class="org.dodgybits.progress.view.controllers.EditDeployController">
+    <property name="personDao" ref="personDao"/> 
+    <property name="deployDao" ref="deployDao"/>
+  </bean>
+
+  <bean name="/edit/environment" id="editEnvironmentController" class="org.dodgybits.progress.view.controllers.EditEnvironmentController">
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="deployTargetDao" ref="deployTargetDao"/>
+  </bean>
+
+  <bean name="/save/build" id="saveBuildController" class="org.dodgybits.progress.view.controllers.SaveBuildController">
+    <property name="projectDao" ref="projectDao"/> 
+    <property name="artifactDao" ref="artifactDao"/> 
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/>
+  </bean>
+  
+  <bean name="/save/deploy" id="saveDeployController" class="org.dodgybits.progress.view.controllers.SaveDeployController">
+    <property name="personDao" ref="personDao"/> 
+    <property name="buildDao" ref="buildDao"/>
+    <property name="deployDao" ref="deployDao"/>
+    <property name="environmentDao" ref="environmentDao"/> 
+  </bean>
+  
+  <bean name="/save/environment" id="saveEnvironmentController" class="org.dodgybits.progress.view.controllers.SaveEnvironmentController">
+    <property name="environmentDao" ref="environmentDao"/> 
+    <property name="deployTargetDao" ref="deployTargetDao"/>
+  </bean>
+  
+  <bean id="paramResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver"> 
+    <property name="paramName" value="entity"/> 
+  </bean> 
+ 
+</beans>
