@@ -12,12 +12,7 @@
     </tr>
     <tr> 
       <td class="label">Tag</td>
-      <td>
-        <c:url var="editBuildLink" value="/web/edit/build">
-            <c:param name="build" value="${deploy.build.id}"/>
-        </c:url>
-        <a href="${editBuildLink}">${deploy.build.version}</a>&nbsp;&nbsp;
-      </td>
+      <td>${deploy.build.version}&nbsp;&nbsp;</td>
     </tr>
     <tr> 
       <td class="label">Project</td>

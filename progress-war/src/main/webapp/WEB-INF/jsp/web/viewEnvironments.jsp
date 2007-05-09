@@ -24,18 +24,18 @@
       </tr>
       <c:forEach items="${deployTargets[environment.id]}" var="dt" varStatus="status">
         <tag:tableRow row="${status.index}">
-          <c:set var="cellClass" value="${dt.status}"/>
-          <td class="${cellClass}">${dt.artifact.name}&nbsp;&nbsp;</td>
-          <td class="${cellClass}">${dt.target.name}&nbsp;&nbsp;</td>
-          <td class="${cellClass}">${dt.status}&nbsp;&nbsp;</td>
+          <td>${dt.artifact.name}&nbsp;&nbsp;</td>
+          <td>${dt.target.name}&nbsp;&nbsp;</td>
+          <td>${dt.status}&nbsp;&nbsp;</td>
           <td>
             <c:url var="editDeployLink" value="/web/edit/deploy">
               <c:param name="deploy" value="${dt.deploy.id}"/>
-            </c:url>            <a href="${editDeployLink}">${dt.deploy.build.version}</a>&nbsp;&nbsp;
+            </c:url>
+            <a href="${editDeployLink}">${dt.deploy.build.version}</a>&nbsp;&nbsp;
           </td>
-          <td class="${cellClass}">${dt.deploy.contact.name}&nbsp;&nbsp;</td>
-          <td class="${cellClass}">${dt.comments}&nbsp;&nbsp;</td>
-        </tag:tableRow>      
+          <td>${dt.deploy.contact.name}&nbsp;&nbsp;</td>
+          <td>${dt.comments}&nbsp;&nbsp;</td>
+        </tag:tableRow>
       </c:forEach>
     </c:forEach>
   </tag:table>

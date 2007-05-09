@@ -34,27 +34,11 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <load-on-startup>2</load-on-startup>
   </servlet>
-  
-  <servlet>
-    <servlet-name>gwt</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <load-on-startup>2</load-on-startup>
-  </servlet>
-  
-  <servlet>
-    <servlet-name>envService</servlet-name>
-    <servlet-class>org.dodgybits.progress.view.gwt.server.EnvironmentServiceImpl</servlet-class>
-  </servlet>
     
   <servlet-mapping>
     <servlet-name>web</servlet-name>
     <url-pattern>/web/*</url-pattern>
   </servlet-mapping>  
-  
-  <servlet-mapping>
-    <servlet-name>gwt</servlet-name>
-    <url-pattern>/org.dodgybits.progress.view.gwt.Progress/gwt/*</url-pattern>
-  </servlet-mapping>
   
   <session-config>
       <!-- timeout is in minutes -->

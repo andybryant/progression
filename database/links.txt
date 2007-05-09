@@ -13,12 +13,8 @@
 26	\N	http://test-revUI01:9081/uiserver/admin/home	MZN IM	60
 31	Java	http://jakarta.apache.org/	Jakarta Home	40
 32	\N	http://o22rrrelui03:9080/uiserver/admin/home	MZN mainline	90
-33	\N	http://o22rrrelui10:9080/uiserver/admin/index.jsp	MZN 1.1	110
-34	\N	http://batfink:9080/uiserver/admin/index.jsp	MZN signing	120
+33	\N	http://o22rrrelui10:9080/uiserver/admin/index.jsp	MZN 1.1	100
+34	\N	http://batfink:9080/uiserver/admin/index.jsp	MZN signing	110
 35	Java	http://java.sun.com/j2se/1.4.2/docs/api/index.html	J2SE 1.4.2 Javadoc	20
 36	Java	http://java.sun.com/j2ee/1.4/docs/api/index.html	J2EE 1.4 Javadoc	30
-49	\N	http://o22rrrelui06:9082/caserver/admin/home	Content Aggregator	100
-56	uiActive	http://sydc/bugs/	Bugzilla	90
-57	Jakarta	http://jakarta.apache.org/commons/lang/api-release/index.html	Commons lang	100
-58	Jakarta	http://jakarta.apache.org/commons/collections/api-release/index.html	Commons collections	110
-59	Jakarta	http://jakarta.apache.org/commons/configuration/apidocs_1.1/index.html	Commons config 1.1	120
+49	\N	http://o22rrrelui06:9082/caserver/admin/home	Content Aggregator	95

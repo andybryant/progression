@@ -1,9 +1,0 @@
-<module>
-
-	<!-- Inherit the core Web Toolkit stuff.                  -->
-	<inherits name='com.google.gwt.user.User'/>
-
-	<!-- Specify the app entry point class.                   -->
-	<entry-point class='org.dodgybits.progress.view.gwt.client.ProgressEntryPoint'/>
-    <servlet path="/gwt/entity" class="org.dodgybits.progress.view.gwt.server.EntityServiceImpl"/>    
-</module>
